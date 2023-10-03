@@ -1,0 +1,686 @@
+ /*scrollbar*/
+body::-webkit-scrollbar {
+width: 6px;
+ background: black;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+   background:white;
+}
+
+/* *******************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+***************             BACKGROUNDS   	      ********************
+***************             BACKGROUNDS           ********************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+*/
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;  
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display:flex; 
+  flex-direction:column;
+  overflow-x: hidden;
+}
+
+.backgroundIndex {
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-attachment:fixed;
+  animation: slideBg 35s linear infinite 0s;
+  animation-timing-function: ease;
+  background-image: url("imagenes/fondoIndex/imagenfondo1.jpg");
+}
+
+@keyframes slideBg{
+  25%{
+    background-image: url("imagenes/fondoIndex/imagenfondo2.jpg"),url("imagenes/fondoIndex/imagenfondo3.jpg");
+  }
+
+  50%{
+    background-image: url("imagenes/fondoIndex/imagenfondo3.jpg"),url("imagenes/fondoIndex/imagenfondo4.jpg");
+  }
+
+  75%{
+    background-image: url("imagenes/fondoIndex/imagenfondo4.jpg"),url("imagenes/fondoIndex/imagenfondo5.jpg");
+  }
+
+  100%{
+    background-image: url("imagenes/fondoIndex/imagenfondo5.jpg");
+  }
+}
+
+.backgroundPaginas {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-attachment:fixed;
+  background-image: url("imagenes/fondoIndex/imagenfondo4.jpg");
+}
+
+/* *******************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+***************             NAVBAR   	        ************************
+***************             INDEX             ************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+*/
+
+.navIndex {
+  margin: 10px;
+  margin-top: 0px;
+  display: flex;
+  justify-content:space-between;
+}
+
+.navIndex .redes, .navIndex .texto {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  margin: 0px 2px 0px 2px;
+  list-style-type: none;
+}
+
+.navIndex .redes .redesLogo{
+  filter: invert(1); 
+}
+
+.navIndex .texto li{
+  font-size: 2.2vmax;
+  color: white;
+}
+
+.navIndex .redes .redesLogo, .navIndex .texto a{
+  margin: 0px 5px 0px 5px;
+  padding: 0 .10rem; 
+}
+
+.navIndex .redes .redesLogo {
+  width: 45px;
+  height: 45px;
+  cursor:pointer;
+}
+
+.navIndex .texto a{
+  box-shadow: inset 0 0 0 0 #ffffff;
+  text-decoration: none;
+  color: white;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out; 
+}
+
+.navIndex .texto a:hover {
+  box-shadow: inset 150px 0 0 0 #ffffff;
+  color: black;
+}
+
+.navIndex .logo {
+  width: 110px;
+}
+
+/* *******************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+***************         TEXTO CENTRAL   	    ************************
+***************             INDEX             ************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+*/
+
+.centralIndex {
+  display: flex;
+  height: 60%;
+  align-items: center;
+  justify-content: center;
+  margin-top:30px;
+}
+
+.centralIndex .Textocentral {
+  width:60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  color:white;
+  padding: 8px;
+  text-align:center;
+}
+
+.centralIndex .Textocentral:hover{
+  transition: all 800ms ease;
+  box-shadow: rgba(48, 46, 47, 1) 5px 5px,rgba(48, 46, 47, 0.6) 10px 10px, rgba(48, 46, 47, 0.4) 15px 15px, rgba(223, 248, 255, 1) -5px -5px,rgba(223, 248, 255, 0.3) -10px -10px, rgba(223, 248, 255, 0.2) -15px -15px;
+}
+
+.centralIndex .Textocentral h1{
+  margin: 5px 0px 3px 0px;
+  padding: 0%;
+  font-size: 7vmax;
+  font-weight: bolder;
+  text-shadow: 3px 3px black, 2px 4px #454545, 4px 2px #454545;
+}
+
+.centralIndex .Textocentral h3{
+  font-size: 18px;
+  margin: 4px;
+  margin-bottom: 15px;
+  font-weight: normal;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* *******************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+***************             NAVBAR   	        ************************
+***************             PAGINAS           ************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+*/
+.navPages {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  position: sticky; 
+  width: 100%;
+  height: 7vmax;
+}
+
+.navPages .logo {
+  margin: 6px;
+  width: 8vmax;
+  height: 6vmax;
+}
+
+.navPages .texto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0px;
+}
+
+.navPages .texto li {
+  margin: 5px 10px 0px 10px;
+}
+
+.navPages .texto li a{
+  color: white;
+  text-decoration: none;
+  font-size: 2vmax;
+  font-weight: bold;
+}
+
+.navPages .texto li:hover{
+  transform: skew(-15deg);
+}
+
+.navPages .texto li a:hover {
+  transition: all 400ms ease;
+  font-size: 2vmax;
+  color: #000000;
+  background-color: white;
+  padding: 2.3vmax;
+}
+
+
+/* *******************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+***************             HEADER   	        ************************
+***************             PAGINAS           ************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+*/
+
+
+.pagesTitle{
+  width:100%;
+  margin: 80px 0px 33px 0px;
+  display: flex;
+  justify-content: center;
+  text-align:center;
+  color:white;
+}
+
+.pagesTitle h1{
+  width:70%;
+  margin: 0px;
+  padding:10px;
+  font-size: 5vmax;
+  background: rgba(0, 0, 0, 0.5);
+  text-shadow: 3px 3px black, 2px 4px #454545, 4px 2px #454545;
+}
+
+/* *******************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+***************             ARTISTAS   	         *********************
+***************             ARTISTAS             *********************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+*/
+
+/* CARDS ARTISTAS */
+.containermain{
+  margin: 10px 10px 60px 10px;
+  display: grid;
+  gap: 2rem;
+  grid-auto-flow: dense;
+  justify-content: center; 
+  grid-template: auto/repeat(auto-fill, minmax(6em, 19em));
+}
+
+.containermain .card {
+  perspective: 1000px;
+  width: auto;
+  height: 450px;
+  background: transparent;
+  color: white;
+} 
+
+.containermain .card  .card-inner {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  border: double;
+  border-image: linear-gradient(15deg, #dedede, #3b3b3b) 1;
+  border-radius: 5px;
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+} 
+
+.containermain .card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.containermain .card  .card-inner .card-front, .containermain .card  .card-inner .card-back{
+  grid-area: 1/1;
+  width: 100%;
+  backface-visibility: hidden;  
+} 
+
+.containermain .card .card-inner .card-front {
+  background: linear-gradient(#757575, #0f0f0f);
+}
+
+.containermain .card .card-inner .card-back {
+  background-color: grey;
+  transform: rotateY(180deg);
+  font-size: 19px;
+  overflow: scroll; 
+}
+
+.containermain .card .card-inner .card-back::-webkit-scrollbar {
+  display: none;  
+}
+
+.containermain .card  .card-inner .card-back h4, .containermain .card  .card-inner .card-back h1 {
+  margin-top: 1px;
+  margin-bottom: 0px;
+  text-shadow: 1px 1px black, 2px 3px #454545, 3px 2px #454545;
+}
+  
+.containermain .card .card-inner .card-front img {
+  margin-top: 7px;
+  height: 70%;
+  width: 90%;
+  object-fit: cover;
+}
+  
+.containermain .card .card-inner .card-front h3{
+  margin: 0;
+  font-size: 24px;
+}
+
+.containermain .card .card-inner .card-back p{
+  padding: 12px;
+  text-align:justify;
+  word-break: break-all;
+  margin-top: 1px;
+
+}
+
+/* *******************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+***************             Tickets   	         *********************
+***************             Tickets              *********************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+*/
+
+.ticketsCard  {
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.ticketsCard  .cards {
+  display: flex;
+  background: rgba(0, 0, 0, 0.9);
+  color:white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin:7px;
+  margin-bottom: 50px;
+  padding:10px;
+  padding-top:35px;
+
+}
+
+.ticketsCard  .cards h2{
+  margin: 4px;
+}
+
+.ticketsCard  .cards .botonTickets {
+  font-size: 20px;
+  text-decoration: none;
+  color:white;
+  margin-bottom:7px;
+  border:solid 3px white;
+  padding:7px;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  text-align: center;
+  
+}
+
+.ticketsCard .cards .botonTickets:hover {
+  font-size: 20px;
+  text-decoration: none;
+  color:black;
+  margin-bottom:7px;
+  border:solid 3px white;
+  padding:7px;
+  background-color: white;
+  box-shadow: inset 200px 0 0 0 #ffffff;
+  text-align: center;
+  display:flex; 
+  flex-direction:column;
+}
+
+/* *******************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+***************             Ticket Info   	         *****************
+***************             Ticket Info              *****************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+*/
+
+.containerInfo{
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.containerInfo div{  
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  color: white;
+  background: center;
+  width: 60%;
+}
+
+.containerInfo .informacion{
+  border: solid 1px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+}
+
+.containerInfo  .informacion h1{
+  text-align: center;
+  margin: 2px 0px 5px 0px;
+}
+
+.containerInfo  .informacion h3{
+  text-align: justify;
+  margin: 0px 0px 10px 0px;
+  font-weight: normal;
+  font-size: 17px;
+}
+
+.containerInfo  .informacion :nth-child(4){
+  margin: 0px 0px 3px 0px;
+  font-weight: bolder;
+}
+
+.containerInfo .informacion ul{
+  margin-top: 0px;
+}
+
+.containerInfo .ticketImg{
+
+}
+
+.containerInfo .ticketImg img{
+  width: 100%;
+}
+
+
+.containerInfo  .botonTickets {
+  font-size: 20px;
+  text-decoration: none;
+  color:white;
+  border:solid 1px white;
+  padding:7px;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  text-align: center;
+  cursor:pointer;
+}
+
+.containerInfo  .botonTickets:hover {
+  font-size: 20px;
+  text-decoration: none;
+  color:black;
+  border:solid 1px white;
+  padding:7px;
+  background-color: white;
+  box-shadow: inset 200px 0 0 0 #ffffff;
+}
+
+
+
+/* *******************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+***************             FOOTER   	        ************************
+***************             FOOTER            ************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+*/
+
+.footer{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  margin-top: auto;
+}
+
+.social{
+  display: flex;
+}
+
+.redesLogo {
+  display: flex; 
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  cursor:pointer;
+  filter: invert(1);
+}
+
+.avisoLegal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.avisoLegal h4{
+  opacity: 0.6;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.avisoLegal p{
+  color: grey;
+  opacity: 0.5;
+  margin-top: 0px;
+}
+
+/* *******************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+***************             MEDIA  	         *************************
+***************             QUERY            *************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+**********************************************************************
+*/
+
+@media (max-width: 820px){
+  .containerInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    word-break: break-word;
+  }
+
+  .containerInfo div{  
+    width: 80%;
+  }
+
+  .pagesTitle{
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  
+	/* INDEX */
+	
+ .navIndex {
+    flex-direction:column-reverse;
+  }
+  
+  .navIndex .texto {
+    display: flex;   
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    align-content:center;
+    margin-top: 5px;
+  }
+
+  .navIndex .redes {
+    display: flex;   
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .navIndex .redes .redesLogo {
+    width: 35px;
+    height: 35px;
+  }
+
+  
+  .navIndex .logo {
+    display: none;
+  }
+
+  .centralIndex {
+    margin-top:0px;
+    height: 50%;
+	  justify-content: center;
+  }  
+
+ .centralIndex .Textocentral {
+    width:300px;  
+  }
+
+  /* Tickets Info */
+  
+  .containerInfo div{  
+    width: 90%;
+  }
+  
+  /* HEADER TODAS LAS PAGINAS */
+   
+  .pagesTitle h1{
+   font-size: 3vmax;
+  }
+} 
+
+@media (max-width: 425px){
+  .navPages {
+    height: 12.5vmax;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navPages .logo{
+    margin: 5px 0px 0px 0px;
+    height: 7vmax;
+  }
+  .navPages .texto{
+    margin-top: 7px;
+    margin-bottom: 2px;
+  }
+  
+  .navPages .texto li a:hover {
+    padding: 1.2vmax;
+  }
+}
